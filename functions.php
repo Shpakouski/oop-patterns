@@ -4,7 +4,7 @@ function project_autoload($class)
 {
     $prefix = "";
 
-    $baseDir = __DIR__ . '/classes';
+    $baseDir = __DIR__ . '/classes/';
 
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
@@ -12,7 +12,7 @@ function project_autoload($class)
     }
 
     $relativeClass = substr($class, $len);
-    $file = $baseDir . str_replace('\\', '/', $relativeClass);
+    $file = $baseDir . str_replace('\\', '/', $relativeClass) . '.php';
 
     if (file_exists($file)) {
         require $file;
