@@ -3,6 +3,8 @@
 //use Singleton\FileSaver;
 //use Multiton\FileSaver;
 //use StaticFactory\StaticFactory;
+//use FactoryMethod\FileSaveFactory;
+//use FactoryMethod\MysqlSaveFactory;
 
 require 'functions.php';
 spl_autoload_register('project_autoload');
@@ -20,3 +22,9 @@ spl_autoload_register('project_autoload');
 //StaticFactory, example of usage:
 //$obj = StaticFactory::create('\StaticFactory\FactoryClass');
 //$obj->save();
+
+//FactoryMethod, examples of usage:
+//$factory = new FileSaveFactory('testFile.txt');
+//$factory->createSaver()->save('Hello world!');
+//$factory = new MysqlSaveFactory('localhost','root','','patterns');
+//$factory->createSaver()->save('Hello world!');
