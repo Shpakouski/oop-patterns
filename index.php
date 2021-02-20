@@ -5,6 +5,9 @@
 //use StaticFactory\StaticFactory;
 //use FactoryMethod\FileSaveFactory;
 //use FactoryMethod\MysqlSaveFactory;
+//use AbstractFactory\DatabaseFactory;
+//use AbstractFactory\MysqlDatabaseFactory;
+//use AbstractFactory\SqliteDatabaseFactory;
 
 require 'functions.php';
 spl_autoload_register('project_autoload');
@@ -28,3 +31,11 @@ spl_autoload_register('project_autoload');
 //$factory->createSaver()->save('Hello world!');
 //$factory = new MysqlSaveFactory('localhost','root','','patterns');
 //$factory->createSaver()->save('Hello world!');
+
+//AbstractFactory, example of usage:
+//function queryExecute(DatabaseFactory $factory) {
+//    $obj = $factory->query();
+//    $obj->execute("INSERT INTO `messages`(`text`) VALUES ('test')");
+//}
+//queryExecute(new MysqlDatabaseFactory('localhost','root','','patterns'));
+//queryExecute(new SqliteDatabaseFactory('test.db'));
