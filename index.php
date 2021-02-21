@@ -15,6 +15,10 @@ spl_autoload_register('project_autoload');
 //use Builder\MysqlQueryBuilder;
 //use Prototype\Post;
 //use Prototype\User;
+//use Observer\Blog;
+//use Observer\SendMailPlugin;
+//use Observer\ChangeTextPlugin;
+//use Observer\ChangeTitlePlugin;
 
 
 //Singleton, example of usage:
@@ -67,3 +71,14 @@ spl_autoload_register('project_autoload');
 //$post2 = clone $post;
 //var_dump($post);
 //var_dump($post2);
+
+//Observer, example of usage:
+//$blog = new Blog();
+//$blog->title = ' Hello World!';
+//$blog->text = 'Some text';
+//$blog->attach(new SendMailPlugin(),'all');
+//$blog->attach(new ChangeTextPlugin(),'Blog:Create');
+//$blog->attach(new ChangeTitlePlugin(),'Blog:Create');
+//$blog->create();
+//echo $blog->title . '<br>';
+//echo $blog->text . '<br>';
