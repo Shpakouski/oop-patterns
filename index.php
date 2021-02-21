@@ -1,5 +1,8 @@
 <?php
 
+require 'functions.php';
+spl_autoload_register('project_autoload');
+
 //use Singleton\FileSaver;
 //use Multiton\FileSaver;
 //use StaticFactory\StaticFactory;
@@ -8,9 +11,9 @@
 //use AbstractFactory\DatabaseFactory;
 //use AbstractFactory\MysqlDatabaseFactory;
 //use AbstractFactory\SqliteDatabaseFactory;
+//use Builder\SQLQueryBuilder;
+//use Builder\MysqlQueryBuilder;
 
-require 'functions.php';
-spl_autoload_register('project_autoload');
 
 //Singleton, example of usage:
 //$file = FileSaver::getInstance();
@@ -39,3 +42,18 @@ spl_autoload_register('project_autoload');
 //}
 //queryExecute(new MysqlDatabaseFactory('localhost','root','','patterns'));
 //queryExecute(new SqliteDatabaseFactory('test.db'));
+
+//Builder, example of usage:
+//function queryExecute(SQLQueryBuilder $builder)
+//{
+//    $query = $builder
+//        ->select(['id', 'text'])
+//        ->from('messages')
+//        ->where("id", 2)
+//        ->limit(1, 2)
+//        ->getQuery();
+//
+//    echo $query;
+//}
+//
+//queryExecute(new MysqlQueryBuilder());
