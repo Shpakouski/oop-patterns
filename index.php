@@ -13,6 +13,8 @@ spl_autoload_register('project_autoload');
 //use AbstractFactory\SqliteDatabaseFactory;
 //use Builder\SQLQueryBuilder;
 //use Builder\MysqlQueryBuilder;
+//use Prototype\Post;
+//use Prototype\User;
 
 
 //Singleton, example of usage:
@@ -57,3 +59,11 @@ spl_autoload_register('project_autoload');
 //}
 //
 //queryExecute(new MysqlQueryBuilder());
+
+//Prototype, example of usage:
+//$user = new User('User');
+//$post = new Post($user, 'First Post', 'Hello World!');
+//$post->addComment('Hello');
+//$post2 = clone $post;
+//var_dump($post);
+//var_dump($post2);
