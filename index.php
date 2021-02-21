@@ -23,6 +23,9 @@ spl_autoload_register('project_autoload');
 //use Strategy\DocumentsSave;
 //use Strategy\ImagesSave;
 //use Strategy\BaseLogic;
+//use Iterator\Blog;
+//use Iterator\Post;
+//use Iterator\BlogTwo;
 
 
 //Singleton, example of usage:
@@ -105,3 +108,14 @@ spl_autoload_register('project_autoload');
 //    new DocumentsSave('patterns.docx'),
 //    new ImagesSave('strategy.png')
 //));
+
+//Iterator, examples of usage:
+////$blog = new Blog();
+//$blog = new BlogTwo();
+//$blog->addPost(new Post('Title', 'Text', 'Author'));
+//$blog->addPost(new Post('Title2', 'Text2', 'Author2'));
+//$blog->addPost(new Post('Title3', 'Text3', 'Author3'));
+//$blog->addPost(new Post('Title4', 'Text4', 'Author4'));
+//foreach ($blog as $post) {
+//    var_dump($post);
+//}
