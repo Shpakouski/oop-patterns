@@ -19,6 +19,10 @@ spl_autoload_register('project_autoload');
 //use Observer\SendMailPlugin;
 //use Observer\ChangeTextPlugin;
 //use Observer\ChangeTitlePlugin;
+//use Strategy\IFileSave;
+//use Strategy\DocumentsSave;
+//use Strategy\ImagesSave;
+//use Strategy\BaseLogic;
 
 
 //Singleton, example of usage:
@@ -82,3 +86,22 @@ spl_autoload_register('project_autoload');
 //$blog->create();
 //echo $blog->title . '<br>';
 //echo $blog->text . '<br>';
+
+//Strategy, examples of usage:
+//$obj = new BaseLogic(new DocumentsSave('patterns.docx'));
+//$obj->execute();
+//$obj = new BaseLogic(new ImagesSave('strategy.png'));
+//$obj->execute();
+//function saveStrategy(array $strategies)
+//{
+//    foreach ($strategies as $strategy) {
+//        if ($strategy instanceof IFileSave) {
+//            $strategy->save();
+//        }
+//    }
+//    return true;
+//}
+//saveStrategy(array(
+//    new DocumentsSave('patterns.docx'),
+//    new ImagesSave('strategy.png')
+//));
