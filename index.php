@@ -29,6 +29,9 @@ spl_autoload_register('project_autoload');
 //use TemplateMethod\Page;
 //use TemplateMethod\HomePage;
 //use TemplateMethod\AboutPage;
+//use NullObject\DB;
+//use NullObject\User;
+//use NullObject\UserRepository;
 
 
 //Singleton, example of usage:
@@ -126,3 +129,10 @@ spl_autoload_register('project_autoload');
 //TemplateMethod, examples of usage:
 //$home = new HomePage();
 //$home->output();
+
+//NullObject, example of usage:
+//$db = new DB('localhost', 'root', '', 'patterns');
+//$userRepository = new UserRepository($db);
+//$user = $userRepository->fetchById(3);
+//echo $user->getLogin();
+
