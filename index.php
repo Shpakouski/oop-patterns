@@ -25,7 +25,10 @@ spl_autoload_register('project_autoload');
 //use Strategy\BaseLogic;
 //use Iterator\Blog;
 //use Iterator\Post;
-//use Iterator\BlogTwo;
+////use Iterator\BlogTwo;
+//use TemplateMethod\Page;
+//use TemplateMethod\HomePage;
+//use TemplateMethod\AboutPage;
 
 
 //Singleton, example of usage:
@@ -119,3 +122,7 @@ spl_autoload_register('project_autoload');
 //foreach ($blog as $post) {
 //    var_dump($post);
 //}
+
+//TemplateMethod, examples of usage:
+//$home = new HomePage();
+//$home->output();
