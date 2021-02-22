@@ -37,6 +37,10 @@ spl_autoload_register('project_autoload');
 //use Mediator\App;
 //use Mediator\Page;
 //use Mediator\PageHelper;
+//use Command\User;
+//use Command\ChatInterface;
+//use Command\GoOnline;
+//use Command\GoOffline;
 
 
 //Singleton, example of usage:
@@ -145,3 +149,11 @@ spl_autoload_register('project_autoload');
 //$router = new Router();
 //new PageHelper(new Data(), $router, new Page());
 //$router->request();
+
+//Command, example of usage:
+//$chat = new ChatInterface();
+//$user = new User();
+//$chat->setCommand(new GoOnline($user));
+//$chat->run();
+//$chat->undo();
+//$chat->redo();
