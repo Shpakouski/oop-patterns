@@ -32,6 +32,11 @@ spl_autoload_register('project_autoload');
 //use NullObject\DB;
 //use NullObject\User;
 //use NullObject\UserRepository;
+//use Mediator\Router;
+//use Mediator\Data;
+//use Mediator\App;
+//use Mediator\Page;
+//use Mediator\PageHelper;
 
 
 //Singleton, example of usage:
@@ -136,3 +141,7 @@ spl_autoload_register('project_autoload');
 //$user = $userRepository->fetchById(3);
 //echo $user->getLogin();
 
+//Mediator, example of usage:
+//$router = new Router();
+//new PageHelper(new Data(), $router, new Page());
+//$router->request();
