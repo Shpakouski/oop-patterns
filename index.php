@@ -45,6 +45,8 @@ spl_autoload_register('project_autoload');
 //use Facade\Log;
 //use Facade\Mail;
 //use Facade\Document;
+//use Adapter\WebMoney;
+//use Adapter\PaymentAdapter;
 
 
 //Singleton, example of usage:
@@ -168,3 +170,7 @@ spl_autoload_register('project_autoload');
 //$mail = new Mail('admin@admin.by', 'subject', 'message', '');
 //$document = new Document($db, $log, $mail);
 //$document->save('new document');
+
+//Adapter, example of usage:
+//$adapter = new PaymentAdapter(new WebMoney(['key' => 'secret']));
+//$adapter->pay(1000);
