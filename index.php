@@ -51,6 +51,8 @@ spl_autoload_register('project_autoload');
 //use Composite\LabelElement;
 //use Composite\InputElement;
 //use Composite\FieldsetElement;
+//use Decorator\BasicPage;
+//use Decorator\HomePage;
 
 
 //Singleton, example of usage:
@@ -190,3 +192,9 @@ spl_autoload_register('project_autoload');
 //$fieldset->addInput(new InputElement());
 //$form->addInput($fieldset);
 //echo $form->render();
+
+//Decorator, example of usage:
+//$page = new BasicPage('Title');
+//$homePage = new HomePage($page);
+//echo $homePage->getTitle();
+//echo $homePage->render();
