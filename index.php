@@ -41,6 +41,10 @@ spl_autoload_register('project_autoload');
 //use Command\ChatInterface;
 //use Command\GoOnline;
 //use Command\GoOffline;
+//use Facade\Db;
+//use Facade\Log;
+//use Facade\Mail;
+//use Facade\Document;
 
 
 //Singleton, example of usage:
@@ -157,3 +161,10 @@ spl_autoload_register('project_autoload');
 //$chat->run();
 //$chat->undo();
 //$chat->redo();
+
+//Facade, example of usage:
+//$db = new Db('localhost', 'root', '', 'patterns');
+//$log = new Log('logFile.txt');
+//$mail = new Mail('admin@admin.by', 'subject', 'message', '');
+//$document = new Document($db, $log, $mail);
+//$document->save('new document');
