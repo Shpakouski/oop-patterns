@@ -47,6 +47,10 @@ spl_autoload_register('project_autoload');
 //use Facade\Document;
 //use Adapter\WebMoney;
 //use Adapter\PaymentAdapter;
+//use Composite\Form;
+//use Composite\LabelElement;
+//use Composite\InputElement;
+//use Composite\FieldsetElement;
 
 
 //Singleton, example of usage:
@@ -174,3 +178,15 @@ spl_autoload_register('project_autoload');
 //Adapter, example of usage:
 //$adapter = new PaymentAdapter(new WebMoney(['key' => 'secret']));
 //$adapter->pay(1000);
+
+//Composite, example of usage:
+//$form = new Form();
+//$form->addInput(new LabelElement('Label'));
+//$form->addInput(new InputElement());
+//$fieldset = new FieldsetElement();
+//$fieldset->addInput(new LabelElement('Label2'));
+//$fieldset->addInput(new InputElement());
+//$fieldset->addInput(new LabelElement('Label3'));
+//$fieldset->addInput(new InputElement());
+//$form->addInput($fieldset);
+//echo $form->render();
