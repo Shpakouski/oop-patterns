@@ -53,6 +53,10 @@ spl_autoload_register('project_autoload');
 //use Composite\FieldsetElement;
 //use Decorator\BasicPage;
 //use Decorator\HomePage;
+//use Bridge\SimpleSave;
+//use Bridge\SafeSave;
+//use Bridge\MysqlDriver;
+//use Bridge\SqliteDriver;
 
 
 //Singleton, example of usage:
@@ -198,3 +202,15 @@ spl_autoload_register('project_autoload');
 //$homePage = new HomePage($page);
 //echo $homePage->getTitle();
 //echo $homePage->render();
+
+//Bridge, example of usage:
+//$mysqlDriver = new MysqlDriver('localhost', 'root', '', 'patterns');
+//$sqliteDriver = new SqliteDriver('bridge.db');
+//$simpleSave = new SimpleSave($mysqlDriver, 'Hello!');
+//$simpleSave->save();
+//$simpleSave = new SimpleSave($sqliteDriver, 'Hello!');
+//$simpleSave->save();
+//$safeSave = new SafeSave($mysqlDriver, 'Hello!', 'md5');
+//$safeSave->save();
+//$safeSave = new SafeSave($sqliteDriver, 'Hello!', 'md5');
+//$safeSave->save();
