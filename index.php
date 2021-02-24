@@ -57,6 +57,9 @@ spl_autoload_register('project_autoload');
 //use Bridge\SafeSave;
 //use Bridge\MysqlDriver;
 //use Bridge\SqliteDriver;
+//use MVC\Controller\Controller;
+//use MVC\Model\Model;
+//use MVC\View\View;
 
 
 //Singleton, example of usage:
@@ -214,3 +217,10 @@ spl_autoload_register('project_autoload');
 //$safeSave->save();
 //$safeSave = new SafeSave($sqliteDriver, 'Hello!', 'md5');
 //$safeSave->save();
+
+//MVC, example of usage:
+//$model = new Model();
+//$controller = new Controller($model);
+//$controller->action();
+//$view = new View($controller, $model);
+//echo $view->output();
